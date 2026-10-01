@@ -1,0 +1,21 @@
+# Rodada piloto: um modelo, as duas estrategias, poucas sentencas.
+# Serve para calibrar os prompts e medir o tempo por sentenca antes da
+# rodada completa do Mes 2.
+
+models:
+  - ollama/llama3.1:8b
+
+strategies:
+  - zero_shot
+  - cot
+
+levels:
+  - forte
+
+generation:
+  temperature: 0.0
+  top_p: 0.9
+  max_tokens: 512
+  seed: 13
+
+limit: 20

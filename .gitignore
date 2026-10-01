@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Corpus do NILC — nao redistribuir
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Saidas das runs (grandes; regeraveis)
+data/outputs/*
+!data/outputs/.gitkeep
+
+.DS_Store
+Thumbs.db
+.env

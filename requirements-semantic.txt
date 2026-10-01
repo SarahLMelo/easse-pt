@@ -1,0 +1,8 @@
+# Opcional — preservacao semantica (BERTScore-PT / sentence-transformers).
+# Instale depois do requirements.txt. Em notebook sem GPU roda em CPU (mais lento).
+# No Windows com GPU NVIDIA, instale o torch pelo indice oficial antes desta linha:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+torch>=2.0
+transformers>=4.30
+sentence-transformers>=2.2
+bert-score>=0.3.13

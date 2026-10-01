@@ -1,0 +1,279 @@
+﻿EASSE-PT - registro do ambiente
+Gerado em: 2026-09-29 22:30:58
+Maquina : WALL-E / Microsoft Windows NT 10.0.26200.0
+
+===== spaCy: modelo pt_core_news_sm
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\spacy\__init__.py", line 74, in load
+    return util.load_model(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\spacy\util.py", line 531, in load_model
+    raise IOError(Errors.E050.format(name=name))
+OSError: [E050] Can't find model 'pt_core_news_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+Collecting pt-core-news-sm==3.8.0
+  Downloading pt_core_news_sm-3.8.0-py3-none-any.whl (13.0 MB)
+     ---------------------------------------- 13.0/13.0 MB 47.8 MB/s  0:00:00
+Installing collected packages: pt-core-news-sm
+Successfully installed pt-core-news-sm-3.8.0
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('pt_core_news_sm')
+pt_core_news_sm OK
+[codigo de saida: 0]
+
+===== Python
+Python 3.12.10
+[codigo de saida: 0]
+
+===== Pacotes instalados (pip freeze)
+annotated-doc==0.0.5
+annotated-types==0.8.0
+anyio==4.15.1
+bert-score==0.3.13
+blis==1.3.3
+catalogue==2.0.10
+certifi==2026.7.22
+charset-normalizer==3.5.1
+click==8.5.0
+cloudpathlib==0.25.0
+cloudpickle==3.1.2
+colorama==0.4.6
+confection==1.3.3
+contourpy==1.4.0
+cycler==0.12.1
+cymem==2.0.13
+easse-pt==0.1.0
+filelock==4.0.7
+fonttools==4.66.1
+fsspec==2026.9.0
+h11==0.16.0
+hf-xet==1.6.0
+httpcore==1.0.9
+httpx==0.28.1
+huggingface_hub==1.33.0
+idna==3.20
+iniconfig==2.3.0
+Jinja2==3.1.6
+joblib==1.6.0
+kiwisolver==1.5.1
+lxml==6.1.3
+markdown-it-py==4.2.0
+MarkupSafe==3.0.3
+matplotlib==3.11.2
+mdurl==0.1.2
+mpmath==1.3.0
+murmurhash==1.0.15
+narwhals==2.26.0
+networkx==3.7
+numpy==2.5.3
+packaging==26.3
+pandas==3.0.6
+pillow==12.3.0
+pluggy==1.6.0
+portalocker==4.4.0
+preshed==3.0.13
+pt_core_news_sm @ https://github.com/explosion/spacy-models/releases/download/pt_core_news_sm-3.8.0/pt_core_news_sm-3.8.0-py3-none-any.whl#sha256=c304fa04db3af73cd08a250feacf560506e15a2ec2469bd1b09f06847f6b455c
+pydantic==2.13.5
+pydantic_core==2.46.5
+Pygments==2.21.0
+pyparsing==3.3.3
+pyphen==0.18.1
+pytest==9.1.1
+python-dateutil==2.9.0.post0
+PyYAML==6.0.3
+regex==2026.9.29
+requests==2.34.2
+rich==15.0.0
+sacrebleu==2.6.0
+safetensors==0.8.0
+scikit-learn==1.9.1
+scipy==1.18.1
+sentence-transformers==6.1.0
+setuptools==84.0.0
+shellingham==1.5.4
+six==1.17.0
+smart_open==8.0.2
+spacy==3.8.16
+spacy-legacy==3.0.12
+spacy-loggers==1.0.5
+srsly==2.5.4
+sympy==1.14.0
+tabulate==0.10.0
+thinc==8.3.13
+threadpoolctl==3.7.0
+tokenizers==0.23.2
+torch==2.14.0
+tqdm==4.70.1
+transformers==5.17.0
+typer==0.27.2
+typing-inspection==0.4.4
+typing_extensions==4.16.0
+tzdata==2026.4
+urllib3==2.8.0
+wasabi==1.1.3
+weasel==1.0.0
+wrapt==2.5.0
+[codigo de saida: 0]
+
+===== Ollama
+ollama version is 0.34.4
+NAME           ID              SIZE      MODIFIED      
+llama3.1:8b    46e0c10c039e    4.9 GB    7 minutes ago    
+[codigo de saida: 0]
+
+===== Testes (pytest)
+............................................                     [100%]
+[codigo de saida: 0]
+
+===== Diagnostico (easse-pt doctor)
+
+EASSE-PT 0.1.0 — diagnostico do ambiente
+----------------------------------+--------+-------------------------------------------------------------------------------
+Componente                       | Status | Detalhe                                                                      
+----------------------------------+--------+-------------------------------------------------------------------------------
+Python                           | ok     | 3.12.10                                                                      
+numpy                            | ok     | 2.5.3                                                                        
+pandas                           | ok     | 3.0.6                                                                        
+pyyaml                           | ok     | 6.0.3                                                                        
+requests                         | ok     | 2.34.2                                                                       
+sacrebleu (BLEU canonico)        | ok     | 2.6.0                                                                        
+pyphen (silabas PT)              | ok     | 0.18.1                                                                       
+tqdm (opcional)                  | ok     | 4.70.1                                                                       
+spacy (opcional)                 | ok     | 3.8.16                                                                       
+nltk (opcional)                  | FALTA  | nao instalado                                                                
+sentence-transformers (opcional) | ok     | 6.1.0                                                                        
+bert-score (opcional)            | ok     | 0.3.12                                                                       
+Tokenizador PT                   | ok     | spacy (pt_core_news_sm)                                                      
+Motor de BLEU                    | ok     | sacrebleu                                                                    
+Ollama                           | ok     | llama3.1:8b                                                                  
+Corpus PorSimples                | FALTA  | data/processed/porsimplesent.jsonl ausente — `easse-pt corpus-build data/raw`
+----------------------------------+--------+-------------------------------------------------------------------------------
+
+Pendencias: Corpus PorSimples
+[codigo de saida: 0]
+
+===== Teste de fumaca: avaliacao das 3 sentencas geradas pelo llama3.1:8b
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+System.Management.Automation.RemoteException
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 14593.09it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: neuralmind/bert-base-portuguese-cased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+System.Management.Automation.RemoteException
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\huggingface_hub\file_download.py:149: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\sarah\.cache\huggingface\hub\models--sentence-transformers--paraphrase-multilingual-MiniLM-L12-v2. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\huggingface_hub\file_download.py:149: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\sarah\.cache\huggingface\hub. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+System.Management.Automation.RemoteException
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights:  16%|█▌        | 31/199 [00:00<00:00, 305.86it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1669.66it/s]
+{
+  "run": "amostra-sintetica-n3__ollama_llama3.1-8b__cot__forte",
+  "dataset": "amostra-sintetica",
+  "n": 3,
+  "ref_levels": [
+    "natural",
+    "forte"
+  ],
+  "model": "ollama/llama3.1:8b",
+  "strategy": "cot",
+  "level": "forte",
+  "n_errors": 0,
+  "tokenizer_backend": "spacy",
+  "tokenizer_model": "pt_core_news_sm",
+  "sari": 49.94849702750239,
+  "sari_keep": 37.90550957814475,
+  "sari_del": 88.97922359383917,
+  "sari_add": 22.96075791052324,
+  "bleu": 26.545128668584404,
+  "bleu_bp": 1.0,
+  "bleu_ratio": 1.186046511627907,
+  "bleu_engine": "sacrebleu",
+  "flesch_sys": 61.72748127340827,
+  "flesch_orig": 1.6032456140351314,
+  "flesch_ref_natural": 61.01692307692309,
+  "flesch_ref_forte": 67.90038793103449,
+  "flesch_gain": 60.12423565937314,
+  "compression_ratio": 1.2357142857142858,
+  "sentence_splits": 2.0,
+  "lexical_copy": 0.47420634920634924,
+  "added_words": 0.5257936507936508,
+  "deleted_words": 0.4845061728395062,
+  "levenshtein_sim": 0.35415996856356946,
+  "exact_copy": 0.0,
+  "is_empty": 0.0,
+  "bertscore_error": "OverflowError: int too big to convert",
+  "meaning_sim_mean": 81.46440386772156,
+  "meaning_sim_min": 76.91965103149414,
+  "meaning_drop_rate": 66.66666666666667,
+  "latency_mean_s": 32.698,
+  "latency_total_s": 98.09400000000001
+}
+[codigo de saida: 0]
+
+===== Limpeza (itens enviados para a Lixeira)
+  lixeira: INSTALAR.bat
+  lixeira: scripts\bootstrap_windows.ps1
+  lixeira: bootstrap.log
+  lixeira: setup.log
+  lixeira: install-status.txt
+  lixeira: scripts\setup.sh
+  lixeira: data\outputs\smoke
+  lixeira: data\processed\amostra-sintetica.forte
+  lixeira: data\processed\amostra-sintetica.natural
+  lixeira: data\processed\amostra-sintetica.orig
+  lixeira: data\processed\amostra_sintetica.jsonl
+  lixeira: easse_pt.egg-info
+  lixeira: .venv\Lib\site-packages\scipy-1.18.1-cp312-cp312-win_amd64.whl
+
+Manutencao concluida.
+
+===== BERTScore-PT (verificacao apos correcao do OverflowError)
+Traceback (most recent call last):
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\httpx\_transports\default.py", line 250, in handle_request
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\httpcore\_sync\connection.py", line 101, in handle_request
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\httpcore\_sync\connection.py", line 78, in handle_request
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\httpcore\_sync\connection.py", line 156, in _connect
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\httpcore\_backends\sync.py", line 154, in start_tls
+  File "C:\Users\sarah\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+httpcore.ConnectTimeout: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "C:\Users\sarah\Documents\easse-pt\easse_pt\metrics\semantic.py", line 84, in bertscore_pt
+  File "C:\Users\sarah\Documents\easse-pt\easse_pt\metrics\semantic.py", line 55, in _bert_scorer
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\bert_score\scorer.py", line 97, in __init__
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\bert_score\utils.py", line 329, in get_tokenizer
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\transformers\models\auto\tokenization_auto.py", line 971, in from_pretrained
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\transformers\tokenization_utils_base.py", line 1665, in from_pretrained
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\transformers\utils\hub.py", line 150, in list_repo_templates
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\huggingface_hub\hf_api.py", line 4103, in list_repo_tree
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\huggingface_hub\utils\_pagination.py", line 36, in paginate
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\httpx\_client.py", line 1053, in get
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\httpx\_client.py", line 825, in request
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\httpx\_client.py", line 914, in send
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\httpx\_transports\default.py", line 249, in handle_request
+  File "C:\Users\sarah\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+  File "C:\Users\sarah\Documents\easse-pt\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+httpx.ConnectTimeout: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[codigo de saida: 1]

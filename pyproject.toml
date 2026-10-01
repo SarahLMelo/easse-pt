@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "easse-pt"
+version = "0.1.0"
+description = "EASSE-PT: adaptacao do framework EASSE para avaliacao automatica de simplificacao de sentencas em Portugues do Brasil"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "GPL-3.0-or-later" }
+authors = [{ name = "Sarah Leitao Melo" }]
+keywords = ["nlp", "sentence-simplification", "evaluation", "portuguese", "sari", "easse"]
+
+# Nucleo minimo: o pacote roda so com isto (BLEU e silabas tem fallback interno).
+dependencies = [
+    "numpy>=1.23",
+    "pandas>=1.5",
+    "requests>=2.28",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+# Recomendado: BLEU canonico (sacrebleu) e silabacao por dicionario (pyphen).
+recommended = ["sacrebleu>=2.3", "pyphen>=0.14", "tqdm>=4.64"]
+# Tokenizacao linguistica mais precisa (opcional; ha fallback por regex)
+spacy = ["spacy>=3.5"]
+nltk = ["nltk>=3.8"]
+# Preservacao semantica (BERTScore-PT / sentence-transformers)
+semantic = ["torch>=2.0", "transformers>=4.30", "sentence-transformers>=2.2", "bert-score>=0.3.13"]
+dev = ["pytest>=7.0", "pytest-cov>=4.0", "ruff>=0.1"]
+
+[project.scripts]
+easse-pt = "easse_pt.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["easse_pt*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"

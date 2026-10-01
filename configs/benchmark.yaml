@@ -1,0 +1,30 @@
+# Grade do benchmark EASSE-PT.
+# Cada combinacao modelo x estrategia x nivel vira uma run independente em
+# data/outputs/. Comente linhas para reduzir o custo computacional.
+
+models:
+  - ollama/llama3.1:8b          # Llama 3 (Meta) — citado no plano
+  - ollama/qwen2.5:7b           # multilingue forte para PT, roda em 8 GB
+  # - ollama/deepseek-r1:7b     # DeepSeek destilado (reasoning; respostas longas)
+  # - ollama/gemma2:9b
+  # - ollama/sabia-7b           # se houver um modelo PT-BR local disponivel
+  # - dummy/rule-based          # baseline superficial (checagem do pipeline)
+
+strategies:
+  - zero_shot                   # prompting direto
+  - cot                         # passo a passo (Zhang et al., 2026)
+
+levels:
+  - natural                     # leitores em geral
+  - forte                       # leitores com baixo nivel de alfabetizacao
+
+# Deterministico: o mesmo comando deve reproduzir as mesmas simplificacoes.
+generation:
+  temperature: 0.0
+  top_p: 0.9
+  max_tokens: 512
+  seed: 13
+
+# Numero de sentencas por run. null = corpus inteiro.
+# Comece com 50 para calibrar os prompts antes da rodada completa.
+limit: null
